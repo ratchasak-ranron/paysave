@@ -25,6 +25,8 @@ import App from 'containers/App';
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
 
+import firebase from 'firebase';
+
 // Load the favicon and the .htaccess file
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=[name].[ext]!./.htaccess'; // eslint-disable-line import/extensions
@@ -45,6 +47,18 @@ const openSansObserver = new FontFaceObserver('Open Sans', {});
 openSansObserver.load().then(() => {
   document.body.classList.add('fontLoaded');
 });
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyBYuMH7Xgo4c3QJGmUQm57sConU7WoiB40',
+  authDomain: 'paysave-eec31.firebaseapp.com',
+  databaseURL: 'https://paysave-eec31.firebaseio.com',
+  projectId: 'paysave-eec31',
+  storageBucket: 'paysave-eec31.appspot.com',
+  messagingSenderId: '889186109605',
+};
+
+// Initialize firebase instance
+firebase.initializeApp(firebaseConfig);
 
 // Create redux store with history
 const initialState = {};

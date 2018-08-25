@@ -12,13 +12,22 @@
 
 import { fromJS } from 'immutable';
 
-import { LOAD_REPOS_SUCCESS, LOAD_REPOS, LOAD_REPOS_ERROR } from './constants';
+import {
+  LOAD_REPOS_SUCCESS,
+  LOAD_REPOS,
+  LOAD_REPOS_ERROR,
+  SHOW_FULL_SCREEN,
+  HIDE_FULL_SCREEN,
+  SET_NAVBAR_TITLE,
+} from './constants';
 
 // The initial state of the App
 const initialState = fromJS({
   loading: false,
   error: false,
   currentUser: false,
+  fullScreen: true,
+  navBarTitle: 'Pay Save',
   userData: {
     repositories: false,
   },
@@ -38,6 +47,12 @@ function appReducer(state = initialState, action) {
         .set('currentUser', action.username);
     case LOAD_REPOS_ERROR:
       return state.set('error', action.error).set('loading', false);
+    case SHOW_FULL_SCREEN:
+      return state.set('fullScreen', true);
+    case HIDE_FULL_SCREEN:
+      return state.set('fullScreen', false);
+    case SET_NAVBAR_TITLE:
+      return state.set('navBarTitle', action.title);
     default:
       return state;
   }

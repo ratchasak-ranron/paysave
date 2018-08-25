@@ -11,6 +11,12 @@ const selectRoute = state => state.get('route');
 const makeSelectCurrentUser = () =>
   createSelector(selectGlobal, globalState => globalState.get('currentUser'));
 
+const makeSelectFullScreen = () =>
+  createSelector(selectGlobal, globalState => globalState.get('fullScreen'));
+
+const makeSelectNavBarTitle = () =>
+  createSelector(selectGlobal, globalState => globalState.get('navBarTitle'));
+
 const makeSelectLoading = () =>
   createSelector(selectGlobal, globalState => globalState.get('loading'));
 
@@ -28,6 +34,8 @@ const makeSelectLocation = () =>
 export {
   selectGlobal,
   makeSelectCurrentUser,
+  makeSelectFullScreen,
+  makeSelectNavBarTitle,
   makeSelectLoading,
   makeSelectError,
   makeSelectRepos,

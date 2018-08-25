@@ -58,7 +58,6 @@
       "git add --force"
     ]
   },
-  "pre-commit": "lint:staged",
   "babel": {
     "plugins": [
       "styled-components"
@@ -151,6 +150,7 @@
     "compression": "1.7.2",
     "cross-env": "5.2.0",
     "express": "4.16.3",
+    "firebase": "^4.12.0",
     "fontfaceobserver": "2.0.13",
     "history": "4.7.2",
     "hoist-non-react-statics": "2.5.5",
@@ -166,7 +166,9 @@
     "react-helmet": "5.2.0",
     "react-intl": "2.4.0",
     "react-loadable": "5.4.0",
+    "react-number-format": "^3.5.1",
     "react-redux": "5.0.7",
+    "react-redux-firebase": "^2.1.8",
     "react-router-dom": "4.3.1",
     "react-router-redux": "5.0.0-alpha.9",
     "redux": "4.0.0",
@@ -185,6 +187,7 @@
     "babel-eslint": "8.2.3",
     "babel-loader": "7.1.4",
     "babel-plugin-dynamic-import-node": "1.2.0",
+    "babel-plugin-import": "^1.8.0",
     "babel-plugin-react-intl": "2.4.0",
     "babel-plugin-react-transform": "3.0.0",
     "babel-plugin-styled-components": "1.5.1",
@@ -228,7 +231,6 @@
     "null-loader": "0.1.1",
     "offline-plugin": "5.0.5",
     "plop": "2.0.0",
-    "pre-commit": "1.2.2",
     "prettier": "1.13.5",
     "react-test-renderer": "16.4.1",
     "rimraf": "2.6.2",
